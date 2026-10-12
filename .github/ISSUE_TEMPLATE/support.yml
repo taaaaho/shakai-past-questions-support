@@ -1,0 +1,33 @@
+name: サポート・掲載内容のご連絡
+description: 不具合、ご要望、問題・解説についてのご連絡
+title: "[サポート] "
+labels: [support]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 種別
+      options:
+        - アプリの不具合
+        - 問題・解説について
+        - ご要望
+        - その他
+    validations:
+      required: true
+  - type: input
+    id: question
+    attributes:
+      label: 開催回・問題番号（該当する場合）
+      placeholder: 例：第38回 問題49
+  - type: textarea
+    id: detail
+    attributes:
+      label: 内容
+      description: 個人情報は入力しないでください。
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 端末・iOSバージョン（不具合の場合）
+      placeholder: 例：iPhone 16 / iOS 26.0
